@@ -1,1 +1,97 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunterz Studios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HUNTERZ STUDIOS</h1>
+            <p class="tagline">CRAFTED BY TWO PASSIONATE DEVELOPERS</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="home">Home</button>
+            <button class="tab-button" data-tab="games">Games</button>
+            <button class="tab-button" data-tab="about">About</button>
+            <button class="tab-button" data-tab="contact">Contact</button>
+        </nav>
+
+        <main>
+
+            <div id="home" class="tab-content active">
+                <div class="hero-section">
+                    <p>We create gaming experiences through passion, innovation, and dedication to quality.</p>
+                    <div class="cta-buttons">
+                        <a href="https://forcedentry.netlify.app/" class="cta-button" target="_blank">Play ForceD Entry</a>
+                        <button class="cta-button secondary" onclick="switchTab('games')">Explore Our Work</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="games" class="tab-content">
+                <h2 style="text-align: center; margin-bottom: 40px; font-weight: 300; font-size: 2rem;">OUR GAMES</h2>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <h3>FORCED ENTRY</h3>
+                        <p>An intense action experience that challenges players with strategic combat and immersive environments.</p>
+                        <p class="game-status">In Development</p>
+                        <a href="https://forcedentry.netlify.app/" class="game-link" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about" class="tab-content">
+                <h2 style="text-align: center; margin-bottom: 40px; font-weight: 300; font-size: 2rem;">ABOUT US</h2>
+                <div class="about-content">
+                    <p>We are two young developers united by our passion for creating exceptional gaming experiences. We believe in the power of games to tell stories and bring people together.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>2</h3>
+                            <p>Developers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1</h3>
+                            <p>Project under Development</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Self Made</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="tab-content">
+                <h2 style="text-align: center; margin-bottom: 40px; font-weight: 300; font-size: 2rem;">GET IN TOUCH</h2>
+                <div class="contact-content">
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <h3>Studio Mail</h3>
+                            <a href="mailto:studios.hunterz@gmail.com">studios.hunterz@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Game Support</h3>
+                            <a href="mailto:forcedentry.game@gmail.com">forcedentry.game@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Our Project</h3>
+                            <a href="https://forcedentry.netlify.app/" target="_blank">forcedentry.netlify.app</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Hunterz Studios. Crafted with precision and passion.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
