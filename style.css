@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 40px 0;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+
+.tab-button {
+    padding: 15px 35px;
+    border: 1px solid #333;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tab-button.active {
+    background: #ffffff;
+    color: #0a0a0a;
+    border-color: #ffffff;
+}
+
+.tab-button:hover:not(.active) {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-color: #555;
+}
+
+.tab-content {
+    display: none;
+    margin-bottom: 50px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-section {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #ccc;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 15px 35px;
+    background: #ffffff;
+    color: #0a0a0a;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+.cta-button:hover {
+    background: #333;
+    color: #ffffff;
+    border-color: #333;
+}
+
+.cta-button.secondary:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+    border-color: #ffffff;
+}
+
+.games-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.game-card {
+    background: #1a1a1a;
+    padding: 40px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.game-card:hover {
+    border-color: #555;
+    transform: translateY(-5px);
+}
+
+.game-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.game-card p {
+    color: #888;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.game-status {
+    color: #ffffff;
+    font-weight: 500;
+    margin: 20px 0;
+    padding: 5px 15px;
+    background: #333;
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.game-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #555;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.game-link:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+    border-color: #ffffff;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #ccc;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.stat {
+    text-align: center;
+    padding: 40px 20px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+}
+
+.stat h3 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.stat p {
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.contact-methods {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.contact-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: #555;
+}
+
+.contact-item h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tab-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.tab-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
