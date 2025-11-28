@@ -1,5 +1,4 @@
-from flask import Flask, render_template, jsonify
-import os
+from flask import Flask, render_template_string, jsonify, send_from_directory
 
 app = Flask(__name__)
 
@@ -20,9 +19,15 @@ games = [
     }
 ]
 
+@app.route('/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('.', filename)
+
 @app.route('/')
 def index():
-    return render_template('index.html', studio=studio_info, games=games)
+    with open('index.html', 'r', encoding='utf-8') as f:
+        html_content = f.read()
+    return render_template_string(html_content, studio=studio_info, games=games)
 
 @app.route('/api/studio')
 def get_studio_info():
@@ -33,9 +38,4 @@ def get_games():
     return jsonify(games)
 
 if __name__ == '__main__':
-
-    os.makedirs('templates', exist_ok=True)
-    os.makedirs('static', exist_ok=True)
-
-
     app.run(debug=True, host='0.0.0.0', port=5000)
